@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <br><br>
   Y= <input type="number" name="Y">
   <span class="error">* <?php echo $YErr;?></span>
-  <br><br>
+  <br"><br>
   <input type="submit" name="submit" value="Vytvořit">  
 </form>
 
@@ -69,6 +69,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "<h2>Matice</h2>";
 		for ($row = 0; $row < $Y; $row++) {
  		for ($col = 0; $col < $X; $col++) {
+ 			if ($matice[$col][$row]==$max || $matice[$col][$row]==$min) {
+ 				print_r("<a style=color:red>[".$matice[$col][$row]."]<a> ");
+ 			}
        	print_r("[".$matice[$col][$row]."] ");
   		}
   		echo "<br>";
