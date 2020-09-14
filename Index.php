@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <br><br>
   Y= <input type="number" name="Y">
   <span class="error">* <?php echo $YErr;?></span>
-  <br"><br>
+  <br><br>
   <input type="submit" name="submit" value="Vytvořit">  
 </form>
 
